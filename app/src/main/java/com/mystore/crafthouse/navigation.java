@@ -55,6 +55,9 @@ public class navigation extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        //my changes
+
     }
 
     @Override
@@ -89,4 +92,6 @@ public class navigation extends AppCompatActivity {
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         return super.onContextItemSelected(item);
     }*/
+
+    
 }
