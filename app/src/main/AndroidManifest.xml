@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mystore.crafthouse">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CraftHouse">
-        <activity
+        <activity android:name=".Payment"></activity>
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".best_for_you_row_item" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".Frame2" />
+        <!--<activity
             android:name=".navigation"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/Theme.CraftHouse.NoActionBar"></activity>
+            android:theme="@style/Theme.CraftHouse.NoActionBar" />-->
         <activity android:name=".Reset_Password" />
-        <activity android:name=".Frame2" />
         <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -23,6 +29,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

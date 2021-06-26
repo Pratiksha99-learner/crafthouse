@@ -38,10 +38,10 @@ public class Reset_Password extends AppCompatActivity {
         registeredEmail = (EditText) findViewById(R.id.forgot_password_email);
         resetPasswordBtn = (Button) findViewById(R.id.button);
         goBack = (TextView) findViewById(R.id.forgot_password_go_back);
-        emailIconContainer = (ViewGroup) findViewById(R.id.forgot_password_email_icon_container);
+        /*emailIconContainer = (ViewGroup) findViewById(R.id.forgot_password_email_icon_container);
         emailIcon = (ImageView) findViewById(R.id.forgot_email_icon);
         emailIconText = (TextView) findViewById(R.id.forgot_password_email_icon_text);
-        progressBar = (ProgressBar) findViewById(R.id.forgot_password_progressbar);
+        progressBar = (ProgressBar) findViewById(R.id.forgot_password_progressbar);*/
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
