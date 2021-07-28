@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,12 +25,9 @@ import java.util.Map;
 
 public class Registration extends AppCompatActivity {
 
-    EditText name;
-    EditText phoneNo;
-    EditText email;
-    EditText password;
-    EditText confirmPassword;
+    EditText name,phoneNo,address,email,password,confirmPassword;
     Button register;
+    TextView gotoSellerReg;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseFirestore firebaseFirestore;
@@ -43,16 +41,26 @@ public class Registration extends AppCompatActivity {
 
         name = findViewById(R.id.Name);
         phoneNo = findViewById(R.id.Phone);
+        address = findViewById(R.id.cst_Address);
         email = findViewById(R.id.Email);
         password = findViewById(R.id.Password);
         confirmPassword = findViewById(R.id.confPaswd);
         progressBar = findViewById(R.id.progressBar);
         register = findViewById(R.id.Register);
+        gotoSellerReg = findViewById(R.id.regSeller);
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkUserWithUsernameAndPassword();
+            }
+        });
+
+        gotoSellerReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registration.this,Registration_Seller.class);
+                startActivity(intent);
             }
         });
 
@@ -74,9 +82,11 @@ public class Registration extends AppCompatActivity {
                                     Map<Object,String> userdata = new HashMap<>();
                                     userdata.put("Name",name.getText().toString());
                                     userdata.put("Phone No",phoneNo.getText().toString());
+                                    userdata.put("Address",address.getText().toString());
                                     userdata.put("Email",email.getText().toString());
                                     userdata.put("Password",password.getText().toString());
                                     userdata.put("Confirm Password",confirmPassword.getText().toString());
+                                    userdata.put("Account Type","User");
 
                                     firebaseFirestore.collection("USERS")
                                             .add(userdata)

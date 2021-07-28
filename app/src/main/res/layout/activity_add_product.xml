@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddProductActivity">
+
+    <!--Toolbar-->
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_rect01">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:background="@null"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Add Product"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!--Input form-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView
+            android:id="@+id/cartID"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_shape"/>-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cartID"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/customToolbar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width = "4dp"
+            tools:ignore="NotSibling" />
+
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:padding="10dp"
+            android:hint="Title"
+            android:inputType="textCapSentences|textCapWords"
+            android:layout_below="@id/cartID"/>
+
+        <EditText
+            android:id="@+id/descriptionEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:padding="10dp"
+            android:hint="Description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_below="@id/title"/>
+
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/ic_baseline_apps_24"
+            android:padding="10dp"
+            android:hint="Category"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_below="@id/descriptionEt"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+        <EditText
+            android:id="@+id/quantityEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/ic_baseline_shopping_cart_24"
+            android:hint="Quantity"
+            android:padding="10dp"
+            android:inputType="textCapWords"
+            android:layout_below="@id/categoryTv"/>
+
+        <EditText
+            android:id="@+id/priceEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_rect02"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:padding="10dp"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/quantityEt"/>
+
+       <Button
+           android:id="@+id/addBtn"
+           android:layout_width="150dp"
+           android:layout_height="50dp"
+           android:text="Add Product"
+           android:layout_below="@id/priceEt"
+           android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

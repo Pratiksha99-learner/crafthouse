@@ -3,6 +3,11 @@
     package="com.mystore.crafthouse">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -11,15 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CraftHouse">
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".AddProductActivity"></activity>
+        <activity android:name=".Seller" />
+        <activity android:name=".Registration_Seller" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".Payment" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".best_for_you_row_item" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".Frame2" />
-        <!--<activity
+        <!--
+<activity
             android:name=".navigation"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/Theme.CraftHouse.NoActionBar" />-->
+            android:theme="@style/Theme.CraftHouse.NoActionBar" />
+        -->
         <activity android:name=".Reset_Password" />
         <activity android:name=".Registration" />
         <activity android:name=".MainActivity">
