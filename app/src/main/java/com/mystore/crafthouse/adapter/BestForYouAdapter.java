@@ -1,7 +1,9 @@
 package com.mystore.crafthouse.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,14 +60,12 @@ public class BestForYouAdapter extends RecyclerView.Adapter<BestForYouAdapter.Be
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailActivity.class);
-                //intent.putExtra("image",model.getImageURL());
-                //intent.putExtra("price",model.getPrice());
-                //intent.putExtra("name",model.getName());
+                intent.putExtra("image",model.getImageURL());
+                intent.putExtra("price",model.getPrice());
+                intent.putExtra("name",model.getName());
                 context.startActivity(intent);
             }
         });
-
-
 
     }
 

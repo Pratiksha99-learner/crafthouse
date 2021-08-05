@@ -7,6 +7,73 @@
     android:orientation="vertical"
     tools:context=".DetailActivity">
 
+   <!-- <RelativeLayout
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        android:background="@drawable/shape_rect01">
+
+        <ImageView
+            android:id="@+id/myBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Craft House"
+            android:layout_toEndOf="@+id/myBackBtn"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        android:background="@drawable/shape_rect01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Craft House"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <!-- <ImageView
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_marginLeft="@+id/whitelogout"
+             android:layout_marginEnd="10dp"
+             android:layout_toStartOf="@+id/whitelogout"
+             android:src="@drawable/whitecart" />-->
+
+        <ImageView
+            android:id="@+id/mycart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/whitelogout"
+            android:src="@drawable/whitecart"
+            tools:ignore="InvalidId" />
+
+        <ImageView
+            android:id="@+id/whitelogout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/whitelogout"/>
+
+    </RelativeLayout>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -17,7 +84,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/datailImage"
+                android:id="@+id/detailImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -114,7 +181,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="5dp"
-            android:text="Order Now" />
+            android:text="ADD TO CART" />
     </LinearLayout>
 
 </LinearLayout>

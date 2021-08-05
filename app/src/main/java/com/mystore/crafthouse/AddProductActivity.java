@@ -219,14 +219,14 @@ public class AddProductActivity extends AppCompatActivity {
 
         String timestamp = ""+System.currentTimeMillis();
         HashMap<String,Object> productData = new HashMap<>();
-        productData.put("Product Id",""+timestamp);
-        productData.put("Seller Id",""+sellerId);
-        productData.put("Seller Email",""+sellerEmail);
-        productData.put("Product Title",""+productTitle);
-        productData.put("Product Description",""+productDescription);
-        productData.put("Product Category",""+productCategory);
-        productData.put("Product Quantity",""+productQuantity);
-        productData.put("Product Price",""+originalPrice);
+        productData.put("PId",""+timestamp);
+        productData.put("SId",""+sellerId);
+        productData.put("SEmail",""+sellerEmail);
+        productData.put("PTitle",""+productTitle);
+        productData.put("PDescription",""+productDescription);
+        productData.put("PCategory",""+productCategory);
+        productData.put("PQuantity",""+productQuantity);
+        productData.put("Price",""+originalPrice);
         productData.put("Timestamp",""+timestamp);
 
 

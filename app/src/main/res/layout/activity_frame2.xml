@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,51 @@
     tools:context=".Frame2"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/myToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        android:background="@drawable/shape_rect01">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Craft House"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+       <!-- <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@+id/whitelogout"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/whitelogout"
+            android:src="@drawable/whitecart" />-->
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/whitelogout"
+            android:src="@drawable/whitecart" />
+
+        <ImageView
+            android:id="@+id/whitelogout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/whitelogout"/>
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/best_for_you_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="1dp"
+        android:layout_below="@+id/myToolbar"/>
 
-</LinearLayout>
+</RelativeLayout>

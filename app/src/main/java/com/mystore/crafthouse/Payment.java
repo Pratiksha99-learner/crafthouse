@@ -86,7 +86,7 @@ public class Payment extends AppCompatActivity {
                         .appendQueryParameter("mc", "")
                         .appendQueryParameter("tr", "") //123456789
                         .appendQueryParameter("tn", "test transaction note")
-                        .appendQueryParameter("am", "1")
+                        .appendQueryParameter("am", "2")
                         .appendQueryParameter("cu", "INR")
                         //.appendQueryParameter("url", "https://test.merchant.website")
                         .build();
